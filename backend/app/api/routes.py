@@ -612,7 +612,7 @@ async def get_home(user_id: int, db: AsyncSession = Depends(get_db)):
 
     continue_items = []
     for ks in states:
-        due = ks.next_review is None or ks.next_review <= datetime.now(timezone.utc).replace(tzinfo=None)
+        due = ks.next_review is None or ks.next_review <= datetime.now(timezone.utc)
         if ks.state in (KnowledgeLevel.EXPOSED,):
             status = "Needs reinforcement"
         elif due:
@@ -639,7 +639,7 @@ async def get_home(user_id: int, db: AsyncSession = Depends(get_db)):
     total = len(all_states)
     mastered = sum(1 for s in all_states if s.state in (KnowledgeLevel.APPLIED, KnowledgeLevel.TRANSFERRED, KnowledgeLevel.CONSOLIDATED))
     learning = sum(1 for s in all_states if s.state in (KnowledgeLevel.EXPOSED, KnowledgeLevel.UNDERSTOOD))
-    needs_review = sum(1 for s in all_states if s.next_review and s.next_review <= datetime.now(timezone.utc).replace(tzinfo=None))
+    needs_review = sum(1 for s in all_states if s.next_review and s.next_review <= datetime.now(timezone.utc))
 
     # Recent activity (last 5 sessions with concept names)
     from app.models.models import Session as SessionModel, Activity as ActivityModel
@@ -718,7 +718,7 @@ async def get_stats(user_id: int, db: AsyncSession = Depends(get_db)):
 # --- Review queue (spaced review) ---
 @router.get("/users/{user_id}/review-queue")
 async def get_review_queue(user_id: int, db: AsyncSession = Depends(get_db)):
-    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    now = datetime.now(timezone.utc)
     result = await db.execute(
         select(KnowledgeState)
         .options(selectinload(KnowledgeState.concept))
