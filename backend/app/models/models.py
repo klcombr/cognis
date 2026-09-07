@@ -204,3 +204,15 @@ class Setting(Base):
     key = Column(String(255), unique=True, nullable=False)
     value = Column(Text, default="")
     updated_at = Column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class Donation(Base):
+    __tablename__ = "donations"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    amount = Column(Float, nullable=False)
+    status = Column(String(50), default="PENDING")
+    payment_link_id = Column(String(255), nullable=True)
+    short_reference = Column(String(50), nullable=True)
+    created_at = Column(DateTime(timezone=True), default=utcnow)
+    updated_at = Column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)

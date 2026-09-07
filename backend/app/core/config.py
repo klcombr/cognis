@@ -8,6 +8,9 @@ class Settings(BaseSettings):
     ai_base_url: str = "https://api.openai.com/v1"
     ai_model: str = "gpt-4o-mini"
     cors_origins: list[str] = ["http://localhost:5173", "http://localhost:3000"]
+    sharpify_client_id: str = ""
+    sharpify_client_secret: str = ""
+    sharpify_base_url: str = "https://api.sharpify.com.br"
 
     model_config = {"env_file": ".env"}
 

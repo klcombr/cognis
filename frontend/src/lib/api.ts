@@ -4,6 +4,7 @@ import type {
   Concept,
   ConceptGraph,
   ConfidenceTimelineItem,
+  Donation,
   ErrorAnalysisConcept,
   HistoryItem,
   HomeResponse,
@@ -176,4 +177,13 @@ export const api = {
       method: 'PUT',
       body: JSON.stringify(data),
     }),
+
+  createDonation: (amount: number, name?: string) =>
+    request<Donation>('/donations', {
+      method: 'POST',
+      body: JSON.stringify({ amount, name: name || '' }),
+    }),
+
+  getDonation: (donationId: number) =>
+    request<Donation>(`/donations/${donationId}`),
 };

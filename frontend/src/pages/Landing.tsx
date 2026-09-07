@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DonationModal } from '../components/DonationModal';
 import ThemeToggle from '../components/ThemeToggle';
 
 const FEATURES = [
@@ -72,8 +74,10 @@ const FAQ = [
 ];
 
 export default function Landing() {
+  const [donationOpen, setDonationOpen] = useState(false);
   return (
     <div className="min-h-screen bg-bg">
+      <DonationModal isOpen={donationOpen} onClose={() => setDonationOpen(false)} />
       <a href="#conteudo" className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-bg focus:border-2 focus:border-text focus:px-3 focus:py-2 focus:text-sm focus:font-bold focus:text-text">Pular para o conteúdo</a>
 
       <header className="sticky top-0 z-40 bg-bg border-b-2 border-text">
@@ -288,6 +292,9 @@ export default function Landing() {
               <li><a href="#recursos" className="hover:underline">Recursos</a></li>
               <li><a href="#faq" className="hover:underline">Perguntas frequentes</a></li>
               <li><Link to="/start" className="hover:underline">Começar a estudar</Link></li>
+              <li>
+                <button onClick={() => setDonationOpen(true)} className="hover:underline">Apoie o projeto</button>
+              </li>
             </ul>
           </div>
           <div>

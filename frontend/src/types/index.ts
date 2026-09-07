@@ -203,3 +203,12 @@ export interface Settings {
   enabled_techniques: string;
   weekly_goal: string;
 }
+export interface Donation {
+  id: number;
+  payment_link_id: string;
+  amount: number;
+  status: string;
+  payment_url: string | null;
+  qr_code: string | null;
+  pix_copy_paste: string | null;
+}
