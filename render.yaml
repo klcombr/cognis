@@ -1,0 +1,33 @@
+# Render Blueprint — deploy do backend do Cognis
+# Uso: Render Dashboard → "New Blueprint" → reponto para este repo.
+# Depois do deploy, defina a chave de IA (AI_API_KEY) no serviço cognis-api
+# em Environment → Individual Service Variables (o valor é marcado sync:false).
+
+databases:
+  - name: cognis-db
+    databaseName: cognis
+    user: cognis
+    plan: free
+    region: oregon
+
+services:
+  - type: web
+    name: cognis-api
+    runtime: python
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app.main:app --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: cognis-db
+          property: connectionString
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_BASE_URL
+        value: https://api.groq.com/openai/v1
+      - key: AI_MODEL
+        value: groq/compound-mini
