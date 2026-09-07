@@ -1,0 +1,46 @@
+# Cognis
+
+> Plataforma de estudos adaptativa com IA. Decomponha qualquer tema em conceitos, pratique com sessões que se ajustam ao seu nível e acompanhe seu progresso com revisão espaçada, análise de erros e metas semanais.
+
+Cognis (https://cognis.vercel.app) é uma ferramenta gratuita, em português (pt-BR), para estudantes. É um produto browser-first (SPA React), sem necessidade de instalação, sem anúncios e sem venda de dados.
+
+## Como funciona
+
+1. **Descreva o tema.** O usuário digita o assunto e o objetivo.
+2. **A IA decompõe.** O Cognis gera a lista de conceitos com pré-requisitos e ordem de estudo. O usuário pode editar, renomear, adicionar/remover conceitos, ajustar dependências e regenerar a decomposição.
+3. **Pratique e evolua.** Cada conceito gera sessões de prática adaptativa que mudam de dificuldade e técnica conforme os acertos e erros. Revisão espaçada traz os conceitos fracos de volta no momento certo.
+
+## Produto
+
+- **Faixa de aplicação:** estudos acadêmicos, concursos públicos, carreiras técnicas e programação, idiomas — qualquer assunto que possa ser quebrado em conceitos.
+- **Modelo de negócio:** gratuito; sem anúncios, sem venda de dados.
+- **Privacidade:** os tópicos e o progresso do usuário ficam em seu próprio ambiente. Exportação completa em JSON disponível.
+
+## Detalhes técnicos
+
+- Frontend: React + TypeScript + Vite + Tailwind CSS (SPA, broto em Vercel).
+- Backend: FastAPI + SQLAlchemy + SQLite.
+- Geração de conteúdo: modelo de linguagem via API (Groq, `groq/compound-mini`).
+- Interface: design neo-brutalista preto e branco; i18n pt-BR.
+
+## Conceitos-chave
+
+- **Decomposição de tópicos:** quebra de um assunto em conceitos com grafo de dependências.
+- **Revisão espaçada:** fila de revisão que prioriza conceitos com confiança baixa ou revisão atrasada.
+- **Níveis de conhecimento:** UNKNOWN → EXPOSED → UNDERSTOOD → APPLIED → TRANSFERRED → CONSOLIDATED.
+- **Análise de erros por tipo:** conceitual, procedimental, equívoco, lacuna de conhecimento, descuido, adivinhação.
+- **7 técnicas de retenção:** exemplo resolvido, prática ativa, aplicação, transferência, variação, compressão e explicação.
+
+## Perguntas frequentes
+
+- **É gratuito?** Sim, sem limite de uso, sem cartão e sem anúncios.
+- **Funciona para qualquer assunto?** Sim, qualquer conteúdo que possa ser quebrado em conceitos.
+- **Meus dados são usados para treinar IA?** Não. A IA apenas gera conteúdo sob demanda; o progresso fica no ambiente do usuário.
+- **Precisa instalar?** Não, roda no navegador.
+- **Como acompanho evolução?** Níveis por conceito, linha do tempo de confiança, erros por tipo e meta semanal.
+
+## Páginas
+
+- [Landing / Home](https://cognis.vercel.app/) — página pública de apresentação do produto.
+
+Você também pode buscar pelo nome **"Cognis"** ou **"Cognis estudos"** na sua ferramenta de chat.

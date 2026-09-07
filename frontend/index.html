@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)" />
+    <meta name="author" content="Cognis" />
+    <meta name="description" content="Cognis é uma plataforma de estudos adaptativa com IA. Decomponha qualquer tema em conceitos, pratique com sessões que se ajustam ao seu nível e acompanhe seu progresso com revisão espaçada." />
+    <meta name="keywords" content="estudos, plataforma de estudos, revisão espaçada, inteligência artificial, mapa de conhecimento, aprender, IA para estudar, aprendizado adaptativo" />
+    <title>Cognis — Estudos adaptativos com IA | Decomponha qualquer tema</title>
+
+    <link rel="canonical" href="https://cognis.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Cognis" />
+    <meta property="og:url" content="https://cognis.vercel.app/" />
+    <meta property="og:title" content="Cognis — Estudos adaptativos com IA | Decomponha qualquer tema" />
+    <meta property="og:description" content="Plataforma de estudos adaptativa. A IA decompõe o tema em conceitos, monta a ordem certa e ajusta a prática ao seu nível — em tempo real." />
+    <meta property="og:image" content="https://cognis.vercel.app/og-image.png" />
+    <meta property="og:image:alt" content="Cognis — Interface de estudo adaptativo, preto e branco, com gráfico de progresso" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cognis — Estudos adaptativos com IA" />
+    <meta name="twitter:description" content="Plataforma de estudos adaptativa com IA: decomponha temas, pratique com sessões inteligentes, revise no tempo certo." />
+    <meta name="twitter:image" content="https://cognis.vercel.app/og-image.png" />
+    <meta name="twitter:image:alt" content="Cognis — Plataforma de estudos adaptativa" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Cognis",
+        "alternateName": "Cognis Estudos",
+        "url": "https://cognis.vercel.app/",
+        "description": "Plataforma de estudos adaptativa com IA. Decomponha qualquer tema em conceitos, pratique com sessões que se ajustam ao seu nível e acompanhe seu progresso.",
+        "inLanguage": "pt-BR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://cognis.vercel.app/start?topic={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cognis",
+        "url": "https://cognis.vercel.app/",
+        "logo": "https://cognis.vercel.app/favicon.svg",
+        "description": "Plataforma de estudos adaptativa para acadêmicos, concursos e carreiras técnicas."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O Cognis é gratuito mesmo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Criar tópicos, praticar, revisar e acompanhar seu progresso é gratuito e sem limite de uso. Sem cartão, sem anúncios."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como a IA decompõe o meu tema?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você descreve o tema e a meta. A IA gera uma lista de conceitos com dependências entre eles (o que precisa vir antes) e uma ordem de estudo. Depois você pode editar, renomear, mover pré-requisitos e regenerar quando quiser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Funciona para qualquer assunto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O Cognis foi desenhado para estudos acadêmicos, concursos, carreiras técnicas e idiomas. Se for conteúdo que pode ser quebrado em conceitos, funciona."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Meus dados são usados para treinar IA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Seus tópicos, respostas e progresso ficam no seu ambiente. A IA apenas gera conteúdo de estudo sob demanda, e você pode exportar tudo em JSON a qualquer momento."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso instalar alguma coisa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O Cognis roda inteiro no navegador — no computador, tablet ou celular."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como sei que estou evoluindo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cada conceito tem nível de conhecimento e confiança, com uma linha do tempo por conceito. Você vê erros por tipo, padrão de resposta, meta semanal e um gráfico de domínio geral do tópico."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

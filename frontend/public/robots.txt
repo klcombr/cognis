@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /start
+Sitemap: https://cognis.vercel.app/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+Disallow: /start
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /start
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /start
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
