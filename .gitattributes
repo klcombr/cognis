@@ -1,0 +1,14 @@
+# Normalização de quebras de linha
+* text=auto
+
+# Fontes
+*.ts text eol=lf
+*.tsx text eol=lf
+*.py text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Binários
+*.png binary
+*.db binary
