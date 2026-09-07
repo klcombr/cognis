@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /start
-Sitemap: https://cognis.vercel.app/sitemap.xml
+Sitemap: https://cognis-beta.vercel.app/sitemap.xml
 
 User-agent: GPTBot
 Allow: /

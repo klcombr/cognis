@@ -2,7 +2,7 @@
 
 > Plataforma de estudos adaptativa com IA. Decomponha qualquer tema em conceitos, pratique com sessões que se ajustam ao seu nível e acompanhe seu progresso com revisão espaçada, análise de erros e metas semanais.
 
-Cognis (https://cognis.vercel.app) é uma ferramenta gratuita, em português (pt-BR), para estudantes. É um produto browser-first (SPA React), sem necessidade de instalação, sem anúncios e sem venda de dados.
+Cognis (https://cognis-beta.vercel.app) é uma ferramenta gratuita, em português (pt-BR), para estudantes. É um produto browser-first (SPA React), sem necessidade de instalação, sem anúncios e sem venda de dados.
 
 ## Como funciona
 
@@ -41,6 +41,6 @@ Cognis (https://cognis.vercel.app) é uma ferramenta gratuita, em português (pt
 
 ## Páginas
 
-- [Landing / Home](https://cognis.vercel.app/) — página pública de apresentação do produto.
+- [Landing / Home](https://cognis-beta.vercel.app/) — página pública de apresentação do produto.
 
 Você também pode buscar pelo nome **"Cognis"** ou **"Cognis estudos"** na sua ferramenta de chat.

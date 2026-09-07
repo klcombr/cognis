@@ -45,3 +45,26 @@ npm run dev      # dev local com proxy do backend em :8000
 npm run build    # type-check + build de produção
 npm run preview  # serve a build local
 ```
+
+## Deploy
+
+| Ambiente | URL |
+| --- | --- |
+| Frontend (Vercel) | `https://cognis-beta.vercel.app` |
+| Backend (Render) | `https://cognis-api.onrender.com` |
+
+O `vercel.json` redireciona `/api/(.*)` para o backend em `https://cognis-api.onrender.com/api/$1`.
+
+### Redeploy do frontend
+
+Qualquer commit no branch `main` do GitHub `klcombr/cognis` (com root `frontend/`) dispara um rebuild automático no Vercel. Para um rebuild manual, use o dashboard do Vercel (Deploy → Redeploy) ou o `vercel --prod` (requer login).
+
+### Troca de domínio
+
+Se o Vercel for para outro subdomínio (ou domínio customizado), substitua `https://cognis-beta.vercel.app` em:
+
+- `index.html` (canonical, OG/Twitter, JSON-LD)
+- `public/robots.txt`
+- `public/sitemap.xml`
+- `public/llms.txt`, `public/llms-full.txt`
+- `public/.well-known/llms.txt`
