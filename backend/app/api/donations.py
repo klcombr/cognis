@@ -81,14 +81,15 @@ async def get_payment_link(client: httpx.AsyncClient, payment_link_id: str) -> d
 def _to_response(donation: Donation, payment: dict | None = None) -> DonationResponse:
     pay_data = payment.get("payment", {}) if payment else {}
     gateway = pay_data.get("gateway", {}) if pay_data else {}
+    gateway_data = gateway.get("data", {})
     return DonationResponse(
         id=donation.id,
         payment_link_id=donation.payment_link_id or "",
         amount=donation.amount,
         status=donation.status,
-        payment_url=gateway.get("paymentLink"),
-        qr_code=gateway.get("qrCode"),
-        pix_copy_paste=gateway.get("code"),
+        payment_url=gateway_data.get("paymentLink"),
+        qr_code=gateway_data.get("qrCode"),
+        pix_copy_paste=gateway_data.get("code"),
     )
 
 
